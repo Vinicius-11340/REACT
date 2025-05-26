@@ -9,8 +9,10 @@ function Lista({ tarefa, alternarConclusao, removerTarefa }) {
                     (tarefa.id)}
                 className={tarefa.concluida ? styles.concluida : ''} >
 
+                    {tarefa.texto}
 
             </span>
+            <button onClick={() => removerTarefa(tarefa.id)}>Remover</button>
         </li>
     );
 }
